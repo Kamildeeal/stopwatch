@@ -5,57 +5,53 @@ body {
   display: flex;
   justify-content: center;
 }
-
 .main-container {
   padding: 100px;
   width: 540px;
 }
-
+.timer, .buttons, #start-button, #reset-button, #pause-button, #split-button {
+  margin: 30px;
+}
 .timer {
   font-size: 3rem;
   display: flex;
-  margin: 30px;
   justify-content: center;;
 }
-
 .buttons {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 30px;
 }
-
 .results-container {
   display: flex;
   justify-content: space-between;
   flex-basis: 33%;
 }
-
 #start-button, #reset-button, #pause-button, #split-button {
-  margin: 30px;
   height: 40px;
   width: 115px;
   font-size: 1.3rem;
   border-radius: 10px;
   border: solid 2px white;
 }
-
+:root {
+  --start-color: rgb(54, 226, 48);
+  --reset-color: rgb(41, 201, 212);
+  --pause-color: rgb(196, 77, 77);
+  --split-color: rgb(228, 152, 11);
+}
 #start-button {
-  background-color: rgb(54, 226, 48);
+  background-color: var(--start-color);
 }
-
 #reset-button {
-  background-color: rgb(41, 201, 212);
+  background-color: var(--reset-color);
 }
-
 #pause-button {
-  background-color: rgb(196, 77, 77);
+  background-color: var(--pause-color);
 }
-
 #split-button {
-  background-color: rgb(228, 152, 11);
+  background-color: var(--split-color);
 }
-
 .lp-num, .split-results, .total-time {
   display: flex;
   flex-direction: column;
@@ -63,19 +59,15 @@ body {
   justify-content: center;
   margin-bottom: 8px;
   margin-top: 12px;
-
 }
-
 p {
   margin: 0px;
 }
-
-.runda, .czas, .laczny-czas {
+.lap, .time-container, .time-container2 {
   font-size: 1.2rem;
   width: 180px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;;
-  
+  align-items: center;
 }
